@@ -1,6 +1,7 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div class="container"> 
+  	<a class="contact" href="#">Contact</a>
+   <!--  <div class="credits"><p>Site Created By &copy; <a href="http://suzettemccanny.com">Suzette McCanny</a> <?php echo date('Y'); ?></p></div> -->
   </div>
 </footer>
 

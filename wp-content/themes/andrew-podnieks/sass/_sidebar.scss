@@ -1,6 +1,7 @@
 .sidebar {
-	width: 30%;
+	width: 23%;
 	float: left;
+	position: fixed;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -9,3 +10,86 @@
 		}
 	}
 }
+
+div.sidebar {
+	background: $colorOne;
+	header{
+		padding-top: 40px;
+	}
+
+	img {
+		position: relative;
+		width: 50%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	h2 {
+	    font-size: 18px;
+	    top: 65px;
+	    line-height: 1.7;
+	    width: 100px;
+	    left: 91px;
+	    text-align: center;
+	    letter-spacing: 5px;
+	    font-weight: 300;
+	    position: absolute;
+	    color: #fff;
+	    text-transform: uppercase;
+	    font-family: "Open Sans Condensed",sans-serif;	
+	}
+}
+
+div.sidebar.moydart {
+	background: #fff;
+	border-right: 1px solid $colorOne;
+}
+
+div.sidebar ul.menu {
+	padding: 100px 0px 280px;
+	a {
+		background: none;	
+    	padding: 10px 35%;
+	}
+	li {
+		display: block;
+	    margin: 0;
+	    padding: 10px 0;
+	    font-family: "Old Standard TT",serif;
+	    text-transform: uppercase;
+	    text-align: center;
+	}
+	li, a {
+		transition: all 1s ease;
+	}
+}
+
+ul#menu-andrew-menu {
+	li {
+	    border-bottom: 1px solid #fff;
+	}
+	li:hover {
+    	background: #fff;
+	}
+	li:hover a{
+   		color: $colorOne;
+	}
+}
+
+ul#menu-moydart-menu {
+	li {
+	    border-bottom: 1px solid $colorOne;
+	    font-family: $sans;
+	}
+	li:hover {
+    	background: $colorOne;
+	}
+	a {
+		color: $colorOne;
+	}
+	li:hover a{
+   		color: #fff;
+	}
+}
+
+

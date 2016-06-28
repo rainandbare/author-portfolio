@@ -7,12 +7,28 @@
 * Author URI: http://hackeryou.com
 */
 
+// Variables
+$colorOne: #EB1A20;
+
+// Import Fonts
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700|Open+Sans+Condensed:300,300italic,700);
+
+$sans: 'Open Sans Condensed', sans-serif;
+$serif: 'Old Standard TT', serif;
+
+
+// Import Partials
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
 @import 'sidebar';
 @import 'comments';
+@import 'bookList';
 @import 'footer';
+@import 'home';
+@import 'pages';
+
+
 /*
 ====================================
 Default Styling
@@ -25,6 +41,7 @@ img {
 
 body {
 	color: #333;
+	height: 100vh;
 }
 
 .container {
@@ -32,18 +49,10 @@ body {
 	margin: 0 auto;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
-}
 
 .full {
 	width: 100%;
 }
-
-
-
 
 
 

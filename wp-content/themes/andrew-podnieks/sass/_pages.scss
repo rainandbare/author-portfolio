@@ -1,0 +1,25 @@
+div.memberPhoto {
+	float: right;
+	width: 30%;
+	padding: 70px 0px 0px 46px;
+	clear: both;
+}
+div.memberInfo {
+	float: left;
+	width: 70%;
+
+}
+
+.teamMember {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.teamMember:last-of-type{
+	padding-bottom: 50px;
+}
+
+
+div.memberPhoto img{
+	filter: grayscale(100%);
+}

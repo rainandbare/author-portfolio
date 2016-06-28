@@ -1,0 +1,21 @@
+div.main {
+	overflow: scroll;
+}
+
+.bookEntry {
+	border-bottom: 1px solid #999;
+	padding: 10px 0px;
+	margin: 0px 20px 0px 40px;
+}
+
+img.bookPic {
+	width: 170px;
+	display: block;
+	float: left;
+	padding-right: 10px;
+}
+
+.bookInfo{
+	font-family: $sans;
+	padding: 10px 40px 10px 0px;
+}

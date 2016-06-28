@@ -13,6 +13,9 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
+	add_image_size( 'custom-size', 220, 220, true );
+
+
 
 
 	// Add default posts and comments RSS feed links to head
@@ -22,7 +25,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'andrew' => 'Andrew Menu',
+		'moydart' => 'Moydart Menu'
 	) );
 
 	/*
