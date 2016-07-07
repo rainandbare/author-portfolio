@@ -2,6 +2,13 @@ div.main {
 	overflow: scroll;
 }
 
+section.book-list {
+	h2 {
+		float: left;
+		width: 50%;
+	}
+}
+
 .bookEntry {
 	border-bottom: 1px solid #999;
 	padding: 10px 0px;
@@ -19,3 +26,91 @@ img.bookPic {
 	font-family: $sans;
 	padding: 10px 40px 10px 0px;
 }
+
+.book-menu-group {
+	float: right;
+	width: 50%;
+	padding: 115px 30px 20px 40px;
+    font-family: "Open Sans Condensed",sans-serif;
+}
+.book-menu-label {
+	float: left;
+	padding-top: 3px;
+	width: 30px;
+}
+
+.book-menu {
+	float: left;
+	position: relative;
+	border: 1px solid black;
+	list-style: none; 
+	li {
+		padding: 0;	
+		width: 150px;
+		margin: 0;
+		position: relative;
+		border-top: 1px solid black;
+		list-style: none;
+		ul {
+			position: absolute;
+			left: 150px;
+			top: -1px;
+			display: none;
+			opacity: 0;
+			border: 1px solid black;
+		}
+		:hover {
+			background: lightgrey;
+		}
+		p {
+			padding: 0px 0 0 5px ;	
+			margin: 0;	
+			background: white;
+		}
+	}
+	>li{
+		display: none;
+		opacity: 0;
+	}
+	li:first-of-type{
+		display: block;
+		opacity: 1;
+		border-top: none;
+	}
+	li.sort-by {
+		border: none;	
+	}
+}
+.disappear {
+	opacity: 0;
+}
+
+// .book-menu li:hover ul, .book-menu:hover li, .book-menu:hover p.disappear {
+// 	display: block;
+// 	opacity: 1;
+// }
+
+ul, li {
+	transition: all 1s ease;
+}
+
+section.bookEntry {
+	display: none;
+}
+
+section.display, li.display, p.display, .book-menu li ul.display  {
+	display: block;
+	opacity: 1;
+}
+
+
+
+.hide {
+	display: none;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+

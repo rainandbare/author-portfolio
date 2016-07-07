@@ -96,7 +96,7 @@ img {
 	clear: both;
 }
 
-h2, h3, p {
+h2, h3, p, h4, ul, li, ol{
 	margin: 0;
 	padding: 0;
 }
@@ -107,7 +107,7 @@ p {
 
 header.page h2 {
 	font-size: 50px;
-	padding: 92px 30px 20px 40px;
+	padding: 92px 30px 65px 40px;
 	font-family: $sans;
 	text-transform: uppercase;
 	font-weight: 300
@@ -119,7 +119,7 @@ main.page {
 	font-family: $serif;
 }
 
-p.position {
+p.position, p.published {
 	font-family: $sans;
 	padding: 0px;
 	margin: 0px;

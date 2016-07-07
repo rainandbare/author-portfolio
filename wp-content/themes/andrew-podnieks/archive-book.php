@@ -14,36 +14,79 @@
     <div class="content">
  
     <section class="book-list">
-    <header class="page">
+    <header class="page clearfix">
         <h2><?php the_title(); ?></h2>
+        <div class="book-menu-group clearfix">
+       <?php get_template_part( 'select', 'book' );  ?>
+        </div>
+        <p> </p>
     </header> 
 
           <!-- new book query -->
           <?php
+            // $thePublisher = "Moydart Press";
+            $bookQueryArray = array();
             $bookQuery = new WP_Query(
             array(
               'posts_per_page' => -1,
               'post_type' => 'book',
-              'orderby' => 'menu-order'
+              'meta_key'    => 'year_published',
+              'orderby'     => 'meta_value_num'
               )
-          ); ?>
-          <!-- get portfolio pieces -->
+            ); 
+          ?>
+          <!-- get books  -->
           <?php if ( $bookQuery->have_posts() ) : ?>
-            <?php while ($bookQuery->have_posts()) : $bookQuery->the_post(); ?>
-              <!-- individual book -->
-            <section class = "bookEntry clearfix" id="<?php echo $post->post_name; ?>">
-              <!-- picture -->
-              <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-              <img class="bookPic" src="<?php echo $url; ?>" alt="">
-              <!-- info -->
-              <div class="bookInfo">
-                <h4><?php the_title(); ?></h4>
-                <p><?php the_content(); ?></p>
-              </div>
-            </section>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-            <?php else:  ?>
+            <?php while ($bookQuery->have_posts()) : $bookQuery->the_post(); 
+              $title = get_the_title();
+              $publisher = get_field('publisher');
+              $year = get_field('year_published');
+              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+              $content = get_the_content();
+              $class = clean($publisher[0]);
+              $iihfcat = clean(get_field('iihf_category')[0]);
+              $bookEntry = array(
+                            'title' => $title, 
+                            'publisher' => $publisher, 
+                            'year' => $year, 
+                            'url' => $url, 
+                            'content' => $content,
+                            'class' =>  $class,
+                            'iihfcat' => $iihfcat
+                            );
+              
+              array_push($bookQueryArray, $bookEntry)
+
+            ?>
+        
+            <?php endwhile; 
+            
+            // <!-- individual book -->
+            foreach ($bookQueryArray as $bookEntry) { ?>
+
+                <section class = "bookEntry clearfix all display 
+                <?php 
+                echo $bookEntry['class'];
+                foreach ($bookEntry['publisher'] as $value) {
+                  if ($value == 'IIHF') {
+                    echo " " . $bookEntry['iihfcat'];
+                  }
+                }
+                ?> ">
+                  <!-- picture -->
+                  <img class="bookPic" src="<?php echo $bookEntry['url']; ?>" alt="">
+                  <!-- info -->
+                  <div class="bookInfo">
+                    <h4><?php echo $bookEntry['title']; ?></h4>
+                    <p class="published"><?php echo $bookEntry['publisher'][0]; ?>, <span><?php echo $bookEntry['year']; ?></span></p>
+                    <p><?php echo $bookEntry['content'];?></p>
+                  </div>
+                </section>   
+                <?php  
+              // }
+            }
+             wp_reset_postdata();
+             else:  ?>
             [ stuff that happens if there aren't any posts]
           <?php endif; ?>
     </section>
