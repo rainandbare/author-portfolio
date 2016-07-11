@@ -1,11 +1,20 @@
 div.main {
 	overflow: scroll;
+	padding-bottom: 90px;
 }
 
 section.book-list {
-	h2 {
+	.book-title {
 		float: left;
 		width: 50%;
+	}
+	h2{
+    	padding-bottom: 0px;
+	}
+	h3.book-subtitle {
+	    padding: 0px 30px 70px 40px;
+	    margin-top: -36px;
+    	margin-left: 100px;
 	}
 }
 
@@ -30,9 +39,11 @@ img.bookPic {
 .book-menu-group {
 	float: right;
 	width: 50%;
-	padding: 115px 30px 20px 40px;
+	padding: 137px 37px 22px 118px;
     font-family: "Open Sans Condensed",sans-serif;
+	position: relative;
 }
+
 .book-menu-label {
 	float: left;
 	padding-top: 3px;
@@ -103,8 +114,6 @@ section.display, li.display, p.display, .book-menu li ul.display  {
 	opacity: 1;
 }
 
-
-
 .hide {
 	display: none;
 }
@@ -113,4 +122,7 @@ input[type=radio] {
     display: none;
 }
 
-
+section.translation .bookPic {
+    height: 160px;
+    width: initial;
+}

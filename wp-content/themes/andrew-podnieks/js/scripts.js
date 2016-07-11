@@ -2,6 +2,7 @@ $(function(){
 	console.log("It's working");
 	showSelectedBooks();
 	fakeDropDowMenu();
+	fadeInHome();
 });
 
 function showSelectedBooks(){
@@ -9,7 +10,9 @@ function showSelectedBooks(){
 		$('section.display').removeClass('display');
 		var option = $(this).val();
 		console.log(option);
+		var title = $(this).parent().children('label').text();
 		$('section.bookEntry.' + option).addClass('display');
+		$('h3#book-subtitle').html(title);
 	});
 }
 
@@ -38,4 +41,8 @@ function fakeDropDowMenu(){
 		$('p.disappear').removeClass('display');
 	});
 
+}
+
+function fadeInHome(){
+	$('html#main').addClass('fadein');
 }

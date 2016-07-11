@@ -1,8 +1,8 @@
 a {
-	color: #BA209B;
+	color: $colorOne;
 	text-decoration: none;
 	&:hover {
-		color: #D424B1;
+		color: white;
 	}
 }
 
@@ -96,7 +96,7 @@ img {
 	clear: both;
 }
 
-h2, h3, p, h4, ul, li, ol{
+h2, h3, p, h4, ul, li, ol, h5{
 	margin: 0;
 	padding: 0;
 }
@@ -113,6 +113,14 @@ header.page h2 {
 	font-weight: 300
 }
 
+h3 {
+	font-size: 37px;
+	font-family: $sans;
+	text-transform: uppercase;
+	font-weight: 300;
+    color: rgba(0,0,0,0.3);
+}
+
 main.page {
 	width: 80%;
 	padding: 0px 40px;
@@ -123,4 +131,15 @@ p.position, p.published {
 	font-family: $sans;
 	padding: 0px;
 	margin: 0px;
+}
+
+a.contact {
+	transition: all 0.5s ease;
+	border: 1px solid white;
+}
+
+a.contact:hover {
+	color: $colorOne;
+	background: white;
+	border: 1px solid $colorOne;
 }

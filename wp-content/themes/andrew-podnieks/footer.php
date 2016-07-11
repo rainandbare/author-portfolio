@@ -1,6 +1,6 @@
 <footer>
   <div class="container"> 
-  	<a class="contact" href="#">Contact</a>
+  	<a class="contact" href="mailto:moydartpress@sympatico.ca">Contact</a>
    <!--  <div class="credits"><p>Site Created By &copy; <a href="http://suzettemccanny.com">Suzette McCanny</a> <?php echo date('Y'); ?></p></div> -->
   </div>
 </footer>

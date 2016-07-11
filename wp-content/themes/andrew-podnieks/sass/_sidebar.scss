@@ -2,6 +2,9 @@
 	width: 23%;
 	float: left;
 	position: fixed;
+	top:0;
+	bottom: 0;
+	background: $colorOne;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -9,27 +12,23 @@
 			list-style: none;
 		}
 	}
-}
-
-div.sidebar {
-	background: $colorOne;
-	header{
+	header {
 		padding-top: 40px;
 	}
 
 	img {
 		position: relative;
-		width: 50%;
+		width: 150px;
+		padding-top: 25px;
 		margin: 0 auto;
 		display: block;
 	}
-
 	h2 {
 	    font-size: 18px;
-	    top: 65px;
 	    line-height: 1.7;
-	    width: 100px;
-	    left: 91px;
+	    top: 90px;
+    	width: 42%;
+    	left: 30%;
 	    text-align: center;
 	    letter-spacing: 5px;
 	    font-weight: 300;
@@ -38,30 +37,29 @@ div.sidebar {
 	    text-transform: uppercase;
 	    font-family: "Open Sans Condensed",sans-serif;	
 	}
+	ul.menu {
+	padding: 100px 0px 280px;
+		a {
+			background: none;	
+	    	padding: 10px 35%;
+		}
+		li {
+			display: block;
+		    margin: 0;
+		    padding: 10px 0;
+		    font-family: "Old Standard TT",serif;
+		    text-transform: uppercase;
+		    text-align: center;
+		}
+		li, a {
+			transition: all 1s ease;
+		}
+	}
 }
 
 div.sidebar.moydart {
 	background: #fff;
 	border-right: 1px solid $colorOne;
-}
-
-div.sidebar ul.menu {
-	padding: 100px 0px 280px;
-	a {
-		background: none;	
-    	padding: 10px 35%;
-	}
-	li {
-		display: block;
-	    margin: 0;
-	    padding: 10px 0;
-	    font-family: "Old Standard TT",serif;
-	    text-transform: uppercase;
-	    text-align: center;
-	}
-	li, a {
-		transition: all 1s ease;
-	}
 }
 
 ul#menu-andrew-menu {

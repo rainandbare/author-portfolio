@@ -23,7 +23,7 @@
         <ul class="main-menu">
    				<li><a href="http://localhost:3000/andrew-podnieks/imprint/">Imprint</a></li>
    				<li><a href="http://localhost:3000/andrew-podnieks/team/">Team</a></li>
-   				<li><a href="http://localhost:3000/andrew-podnieks/books/">Books</a></li>
+   				<li><a href="http://localhost:3000/andrew-podnieks/moydartbooks/">Books</a></li>
    			</ul>
    		</div>
    	</div>

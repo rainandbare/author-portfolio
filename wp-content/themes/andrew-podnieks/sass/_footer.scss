@@ -16,3 +16,13 @@ footer {
 	}	
 }
 
+a.contact {
+	transition: all 0.5s ease;
+	border: 1px solid $colorOne;
+}
+
+a.contact:hover {
+	color: $colorOne;
+	background: white;
+	border: 1px solid $colorOne;
+}

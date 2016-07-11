@@ -10,11 +10,14 @@ html{
 
 div.main {
 	padding-left: 25%;
+	padding-right: 15px;
 }
 
 .main.front {
 	padding-left: inherit;
 }
+
+
 
 html#main {
   background: url(http://localhost:8888/andrew-podnieks/wp-content/uploads/2016/06/oldhockey.jpg) no-repeat center center fixed; 
@@ -22,7 +25,15 @@ html#main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  animation: fadein 1s;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
 
 
 
