@@ -26,12 +26,12 @@ get_header();  ?>
         
 		<?php  
 		$thumb_id = get_post_thumbnail_id();
-		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'square', false);
+		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', false);
 		$thumb_url = $thumb_url_array[0]; 
 		?>
 		<div class="teamMember clearfix">
 			<div class="memberPhoto">
-				<img src=" <?php echo $thumb_url; ?> " alt=" <?php echo the_title; ?>'s Headshot">
+				<img src=" <?php echo $thumb_url; ?> " alt="<?php echo the_title(); ?>'s Headshot">
 			</div>
 			<div class="memberInfo">
 				<h3><?php the_title(); ?></h3>

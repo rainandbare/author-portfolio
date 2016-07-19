@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html id="main" <?php language_attributes(); ?>>
+<html id="main" <?php language_attributes(); ?> style="background:url(<?php echo site_url(); ?>/wp-content/uploads/2016/06/oldhockey.jpg)fixed;-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; ">
 <head>
 	<?php // Load Meta ?>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />

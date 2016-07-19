@@ -16,7 +16,7 @@
     <header class="page clearfix">
         <h2><?php the_title(); ?></h2>
     </header> 
-    <main class="news">
+    <main class="news clearfix">
     		          <!-- new news query -->
           <?php
             $newsQuery = new WP_Query(
@@ -30,7 +30,7 @@
           <?php if ( $newsQuery->have_posts() ) : ?>
             <?php while ($newsQuery->have_posts()) : $newsQuery->the_post(); ?>
                  <!-- individual post -->
-                <section class = "blog-post">
+                <section class = "blog-post clearfix">
                 	<?php echo get_the_tag_list('<h5>',', ','</h5>');?>
                  	<h4><?php the_title(); ?></h4>
                     <p><?php the_content(); ?></p>
@@ -51,5 +51,7 @@
     </main>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
-
+<a href="#" class="back-to-top" style="display: inline;">
+  <i class="fa fa-arrow-up"></i>
+</a>
 <?php get_footer(); ?>

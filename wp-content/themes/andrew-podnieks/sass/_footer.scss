@@ -1,28 +1,63 @@
+		ul.socialMenu{
+			list-style: none;
+			margin: 0 auto;
+			width: 10%;
+			li {
+				width: 50%;
+				display: block;
+				float: left;
+				text-align: center;
+			}
+			li.twitter {
+				padding-top: 6px;
+			}
+			.change {
+				transition: all 0.5s ease;
+			}
+			a:hover .change{
+				fill:white;
+			}
+		}
+
+		.moydart ul.socialMenu a:hover .change{
+			fill:lightgrey;
+		}
+		
+		
+	svg.envelope {
+		width: 28px;
+	}
 footer {
 	clear: both;
 	.container{
 		position: fixed;
-		bottom: 15px;
-		right: 0px;
-	}
-	a {
-		color: white;
-		text-decoration: none;
+		bottom: 0px;
+		width: 100%;
 		background: $colorOne;
-		padding: 15px;
-		text-transform: uppercase;
-		font-size: 16px;
-		font-family: $sans;
-	}	
+		max-width: inherit;
+	}
 }
 
 a.contact {
 	transition: all 0.5s ease;
-	border: 1px solid $colorOne;
+	
 }
 
 a.contact:hover {
-	color: $colorOne;
-	background: white;
-	border: 1px solid $colorOne;
+	
+}
+
+.credits {
+	font-size: 10px;
+	color: $black;
+	position: fixed;
+	right: 4px;
+	bottom: 2px;
+	p {
+		margin: 0;
+		text-align: right;
+	}
+	a {
+		color: $black;
+	}
 }

@@ -2,9 +2,9 @@
 
 div.memberPhoto {
 	float: right;
-	width: 30%;
-	padding: 70px 0px 0px 46px;
-	clear: both;
+    width: 200px;
+    padding: 90px 0 0 46px;
+    clear: both;
 }
 div.memberInfo {
 	float: left;
@@ -23,4 +23,6 @@ div.memberInfo {
 
 div.memberPhoto img{
 	filter: grayscale(100%);
+	border-radius: 7px;
+    border: 1px solid $middle;
 }

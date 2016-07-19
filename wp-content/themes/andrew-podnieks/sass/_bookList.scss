@@ -3,10 +3,11 @@ div.main {
 	padding-bottom: 90px;
 }
 
+
 section.book-list {
 	.book-title {
 		float: left;
-		width: 50%;
+		width: 40%;
 	}
 	h2{
     	padding-bottom: 0px;
@@ -21,7 +22,18 @@ section.book-list {
 .bookEntry {
 	border-bottom: 1px solid #999;
 	padding: 10px 0px;
-	margin: 0px 20px 0px 40px;
+	margin: 0px 0px 0px 40px;
+	float: left;	
+	width: calc(100% - 108px);
+}
+section.bookEntry {
+	display: none;
+}
+section.display {
+	display: block;
+	opacity: 1;
+	position: relative;
+    z-index: -2;
 }
 
 img.bookPic {
@@ -33,85 +45,105 @@ img.bookPic {
 
 .bookInfo{
 	font-family: $sans;
-	padding: 10px 40px 10px 0px;
+	padding: 10px 0px 10px 0px;
 }
 
+section.translation .bookPic {
+    height: 180px;
+    width: initial;
+}
+
+section.translation .bookInfo {
+    width: 190px;
+	float: left;
+}
+
+
+// Book Menu Styles
 .book-menu-group {
 	float: right;
-	width: 50%;
-	padding: 137px 37px 22px 118px;
-    font-family: "Open Sans Condensed",sans-serif;
-	position: relative;
+	width: 60%;
+    font-family: $sans;
 }
 
-.book-menu-label {
-	float: left;
-	padding-top: 3px;
-	width: 30px;
+.book-menu-group-button {
+	float: right;
+    font-family: $sans;
+    padding: 140px 140px 116px;
+    padding: 140px 0px 116px 0px;
+    text-align: right;
+    margin-right: 75px;
+    width: 50%;
+    a{
+    	margin: 0 auto;
+    }
 }
 
 .book-menu {
-	float: left;
-	position: relative;
-	border: 1px solid black;
-	list-style: none; 
+	padding-top: 125px;
 	li {
-		padding: 0;	
-		width: 150px;
-		margin: 0;
 		position: relative;
-		border-top: 1px solid black;
-		list-style: none;
+		list-style: none;    
+		width: 125px;
+    	float: left;
+    	text-align: center;
+    	background: $colorOne;
+    	color: white;
 		ul {
-			position: absolute;
-			left: 150px;
-			top: -1px;
-			display: none;
-			opacity: 0;
-			border: 1px solid black;
-		}
-		:hover {
-			background: lightgrey;
-		}
+			visibility: hidden;
+		  	opacity: 0;
+		  	position: absolute;
+		  	top: 100%;
+		  	left: -1px;
+		  	width: 100%;
+		  	transform: translateY(-2em);
+		  	z-index: -1;
+		  	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+			li{
+				transition: all 0.3s ease;
+				border: 1px solid $colorOne;
+			}
+			li:last-of-type{
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
+			li:hover{
+				background: white;
+				color: $black;
+				border: 1px solid $black;
+			}
+			}
 		p {
-			padding: 0px 0 0 5px ;	
-			margin: 0;	
-			background: white;
+			margin: 0;
 		}
 	}
-	>li{
-		display: none;
-		opacity: 0;
+	>li {
+		background: white;
+		border: 1px $colorOne solid;
+		color: $colorOne;
+		transition: all 0.3s ease;
+		margin: 0px 10px;
+		border-radius: 4px;
 	}
-	li:first-of-type{
-		display: block;
-		opacity: 1;
-		border-top: none;
+	>li.hover {
+		background: $colorOne;
+		color: white;
+		border: 1px $colorOne solid;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
 	}
-	li.sort-by {
-		border: none;	
+	>li:first-of-type.hover{
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
 	}
 }
-.disappear {
-	opacity: 0;
-}
 
-// .book-menu li:hover ul, .book-menu:hover li, .book-menu:hover p.disappear {
-// 	display: block;
-// 	opacity: 1;
-// }
-
-ul, li {
-	transition: all 1s ease;
-}
-
-section.bookEntry {
-	display: none;
-}
-
-section.display, li.display, p.display, .book-menu li ul.display  {
-	display: block;
-	opacity: 1;
+.book-menu li ul.display {
+  visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
 }
 
 .hide {
@@ -122,7 +154,30 @@ input[type=radio] {
     display: none;
 }
 
-section.translation .bookPic {
-    height: 160px;
-    width: initial;
+
+ 
+.back-to-top {
+	background: none;
+	margin: 0;
+ 	position: fixed;
+ 	bottom: 0;
+	right: 10px; 
+	padding: 10px;
+	z-index: 100; 							
+	display: none;
+	text-decoration: none;	 
+	color: #ffffff; 
+	background-color: $colorOne;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	i {
+  		font-size: 30px;
+	}
 }
+ 
+  
+ 
+
+
+
+

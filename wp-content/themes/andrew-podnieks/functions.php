@@ -1,5 +1,4 @@
 <?php
-
 /** Tell WordPress to run theme_setup() when the 'after_setup_theme' hook is run. */
 
 if ( ! function_exists( 'theme_setup' ) ):
@@ -11,7 +10,7 @@ function theme_setup() {
 	*  a square size (also below). You can add more of your own crop
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size(120, 90, true);
+	set_post_thumbnail_size(200, 200, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size( 'custom-size', 220, 220, true );
 

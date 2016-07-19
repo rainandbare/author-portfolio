@@ -20,7 +20,7 @@ div.main {
 
 
 html#main {
-  background: url(http://localhost:8888/andrew-podnieks/wp-content/uploads/2016/06/oldhockey.jpg) no-repeat center center fixed; 
+  // background: url(http://localhost:8888/andrew-podnieks/wp-content/uploads/2016/06/oldhockey.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -106,7 +106,7 @@ html#main {
 		}
 	}
 
-	ul.main-menu {
+	ul.menu {
 	  transition: opacity 0.5s ease;  
 	  list-style: none;
 	  margin: 0 auto;
@@ -117,7 +117,7 @@ html#main {
 	  position: relative;
 	  top: 93px;
 	}
-	&:hover ul.main-menu {
+	&:hover ul.menu {
 		transition: all 1.5s ease;  
 		visibility: visible;
 	  	opacity: 1;

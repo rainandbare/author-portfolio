@@ -1,13 +1,14 @@
 
-          <label class="book-menu-label" for="book-menu-sort">Sort:</label>
+          
             <ul id="book-menu-sort" class="book-menu">
               <li>
                 <input class="all" type="radio" name="book-sort" value="all" id="all">
                 <label class="radio-button" for="all">
-                  <p class="disappear">ALL</p>
+                  <p>ALL</p>
                 </label>
               </li>
-              <li><p>BY PUBLISHER</p>
+              <li>
+                <p>BY PUBLISHER</p>
                 <ul class="book-submenu">
                    <?php 
                    //get list of publishers
@@ -39,9 +40,10 @@
                             </li>
                           <?php } //end of if?>
                         <?php } //end of foreach?>
-                  </ul> 
-                </li> <!-- end of publisher menu li -->
-                <li><p>IIHF</p>
+                </ul> 
+              </li> <!-- end of publisher menu li -->
+              <li>
+                <p>IIHF</p>
                   <ul class="book-submenu">
                         <?php rewind_posts();
                         while ($publisherQuery->have_posts()) : $publisherQuery->the_post(); 

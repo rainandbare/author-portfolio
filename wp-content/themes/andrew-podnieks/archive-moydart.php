@@ -19,8 +19,8 @@
           <h2><?php the_title(); ?></h2>
           <h3 class="book-subtitle">Moydart Press</h3>
         </div>
-        <div class="book-menu-group clearfix">
-        <a class='read' href="http://localhost:3000/andrew-podnieks/books/">See More Books by Andrew Podnieks</a>
+        <div class="book-menu-group-button clearfix">
+          <a class='read' href=" <?php echo site_url(); ?>/books/">See All Books by Andrew Podnieks</a>
         </div>
     </header> 
 
@@ -74,7 +74,7 @@
                   <div class="bookInfo">
                     <h4><?php echo $bookEntry['title']; ?></h4>
                     <p class="published"><?php echo $bookEntry['publisher'][0]; ?>, <span><?php echo $bookEntry['year']; ?></span></p>
-                    <p><?php echo $bookEntry['content'];?></p>
+                    <p class="entry"><?php echo $bookEntry['content'];?></p>
                   </div>
                 </section>   
                 <?php  
@@ -90,5 +90,7 @@
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
-
+<a href="#" class="back-to-top" style="display: inline;">
+  <i class="fa fa-arrow-up"></i>
+</a>
 <?php get_footer(); ?>

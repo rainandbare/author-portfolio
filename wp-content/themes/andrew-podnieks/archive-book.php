@@ -41,6 +41,7 @@
     <?php if ( $bookQuery->have_posts() ) : ?>
       <?php while ($bookQuery->have_posts()) : $bookQuery->the_post(); 
         $title = get_the_title();
+        $other = get_field('other');
         $publisher = get_field('publisher');
         $year = get_field('year_published');
         $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
@@ -54,7 +55,8 @@
                       'url' => $url, 
                       'content' => $content,
                       'class' =>  $class,
-                      'iihfcat' => $iihfcat
+                      'iihfcat' => $iihfcat,
+                      'other' => $other
                       );
         
         array_push($bookQueryArray, $bookEntry)
@@ -80,8 +82,10 @@
             <!-- info -->
             <div class="bookInfo">
               <h4><?php echo $bookEntry['title']; ?></h4>
+
               <p class="published"><?php echo $bookEntry['publisher'][0]; ?>, <span><?php echo $bookEntry['year']; ?></span></p>
-              <p><?php echo $bookEntry['content'];?></p>
+              <p class="other"><?php echo $bookEntry['other']; ?></p>
+              <p class="entry"><?php echo $bookEntry['content'];?></p>
             </div>
           </section>   
           <?php  
@@ -94,20 +98,22 @@
     $rulebookQuery = new WP_Query(
       array(
         'posts_per_page' => -1,
-        'post_type' => 'rule-book-trans'
+        'post_type' => 'rule-book-trans',
+        'orderby' => 'title',
+        'order' => 'ASC'
         )
       ); ?>
           <?php if ( $rulebookQuery->have_posts() ) : ?>
       <?php while ($rulebookQuery->have_posts()) : $rulebookQuery->the_post(); ?>
         <section class = "bookEntry clearfix rule-book translation">
-            <!-- picture -->
-            <img class="bookPic langCover" src="<?php echo get_field('cover') ?>" alt="">
-            <img class="bookPic langInt" src="<?php echo get_field('interior') ?>" alt="">
-            <!-- info -->
             <div class="bookInfo">
               <h4 class="language"><?php the_title(); ?></h4>
               <p><?php echo get_field('other_info');?></p>
             </div>
+            <!-- picture -->
+            <img class="bookPic langCover" src="<?php echo get_field('cover') ?>" alt="">
+            <img class="bookPic langInt" src="<?php echo get_field('interior') ?>" alt="">
+            <!-- info -->
           </section>   
       <?php endwhile;
        wp_reset_postdata();
@@ -120,5 +126,8 @@
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
+<a href="#" class="back-to-top" style="display: inline;">
+  <i class="fa fa-arrow-up"></i>
+</a>
 
 <?php get_footer(); ?>

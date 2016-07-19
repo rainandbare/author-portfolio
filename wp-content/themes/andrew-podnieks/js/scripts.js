@@ -3,6 +3,7 @@ $(function(){
 	showSelectedBooks();
 	fakeDropDowMenu();
 	fadeInHome();
+	backToTop();
 });
 
 function showSelectedBooks(){
@@ -17,14 +18,12 @@ function showSelectedBooks(){
 }
 
 function fakeDropDowMenu(){
-	$('.book-menu').on('mouseover', function(){
-		$(this).children('li').addClass('display');
-		$('p.disappear').addClass('display');
+	$('.book-menu li').on('mouseover', function(){
+		$(this).addClass('hover');
 	});
 
-	$('.book-menu').on('mouseout', function(){
-		$(this).children('li').removeClass('display');
-		$('p.disappear').removeClass('display');
+	$('.book-menu li').on('mouseout', function(){
+		$(this).removeClass('hover');
 	});
 
 	$('.book-menu li').on('mouseover', function(){
@@ -36,9 +35,8 @@ function fakeDropDowMenu(){
 	});
 	
 	$('input[type=radio]').on('click', function(){
-		$('.book-menu').children('li').removeClass('display');
+		$('.book-menu li').removeClass('hover');
 		$('.book-menu li').children('ul').removeClass('display');
-		$('p.disappear').removeClass('display');
 	});
 
 }
@@ -46,3 +44,31 @@ function fakeDropDowMenu(){
 function fadeInHome(){
 	$('html#main').addClass('fadein');
 }
+
+function backToTop(){
+	var offset = 250;
+	var duration = 300;
+	 
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > offset) { 
+			$('.back-to-top').fadeIn(duration);
+		} else {
+	 		$('.back-to-top').fadeOut(duration);
+	}
+	});
+	 
+
+	 
+	$('.back-to-top').click(function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop: 0}, duration);
+	 	return false;
+	});
+}
+
+ 
+
+ 
+
+
+ 

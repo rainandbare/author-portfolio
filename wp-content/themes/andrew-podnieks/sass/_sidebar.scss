@@ -38,7 +38,7 @@
 	    font-family: "Open Sans Condensed",sans-serif;	
 	}
 	ul.menu {
-	padding: 100px 0px 280px;
+	padding: 100px 0px 9px;
 		a {
 			background: none;	
 	    	padding: 10px 35%;
@@ -55,6 +55,9 @@
 			transition: all 1s ease;
 		}
 	}
+	ul.socialMenu {
+		width: 44%;
+	}
 }
 
 div.sidebar.moydart {
@@ -63,6 +66,9 @@ div.sidebar.moydart {
 }
 
 ul#menu-andrew-menu {
+	a {
+		color: white;
+	}
 	li {
 	    border-bottom: 1px solid #fff;
 	}
@@ -90,4 +96,20 @@ ul#menu-moydart-menu {
 	}
 }
 
+header.goToOtherSide {
+	img{
+		padding-top: 0px;
+		border-radius: 8px;
+	}
+	width: 78px;
+	margin: 80px auto;
+	position: relative;
+	h2 {
+		font-size: 10px;
+		top: 55px;
+		width: inherit;
+		left: 5px;
+	}
+
+}
 

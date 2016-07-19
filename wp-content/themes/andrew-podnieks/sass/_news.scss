@@ -1,5 +1,7 @@
 main.news {
-	 column-count: 3;
+	 column-count: 2;  
+     column-gap: 40px;
+     margin-left: 25px;
 }
 
 section.blog-post {
@@ -10,11 +12,9 @@ section.blog-post {
 
 .news {
 	section{
-	 	padding: 18px;
+	 	padding: 18px 18px 29px 18px;
     	border-right: 1px solid lightgrey;
     	border-bottom: 1px solid lightgrey;
-    	border-bottom-right-radius: 11px;
-    	margin-bottom: 20px;
 	 }
 	h4, a{
 		font-family: $sans;
@@ -25,7 +25,6 @@ section.blog-post {
 		padding-bottom: 1px;
 	}
 	h5 {
-		padding-top: 20px;
 		text-transform: uppercase;	
 	}
 }
