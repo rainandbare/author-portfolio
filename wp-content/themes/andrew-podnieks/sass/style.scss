@@ -11,7 +11,7 @@
 $colorOne: #EB1A20;
 $black: #16120E;
 $accent: #6FAFD4;
-$middle: rgba(0,0,0,0.5);
+$middle: rgba(235, 26, 32, 0.7);
 // #C0BCB5,#2A324B#6FAFD4#FC7753#03256C
 
 // Import Fonts
@@ -32,6 +32,7 @@ $serif: 'Old Standard TT', serif;
 @import 'home';
 @import 'pages';
 @import 'news';
+@import 'mediaQueries';
 
 
 /*
@@ -58,7 +59,6 @@ body {
 .full {
 	width: 100%;
 }
-
 
 
 

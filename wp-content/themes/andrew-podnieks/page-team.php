@@ -13,7 +13,7 @@ get_header();  ?>
 	<header class="page">
       	<h2><?php the_title(); ?></h2>
     </header>	
-    <main class="page">
+    <main class="page team-page">
     	<?php $teamQuery = new WP_Query(array(
         'posts_per_page' => -1,
         'post_type' => 'team-member'

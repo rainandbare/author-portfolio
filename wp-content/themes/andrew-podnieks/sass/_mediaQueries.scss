@@ -1,0 +1,242 @@
+@media (max-width: 1127px) {
+div.memberInfo {
+    width: 65%;
+}
+main.page.team-page{
+    width: 100%;
+}
+
+}
+
+
+@media (max-width: 987px) {
+  section.blog-post {
+    width: 45%;
+  }
+    section.book-list .book-title {
+        float: none;
+        width: 100%;
+    }
+    header.page h2 {
+        padding: 26px 33px 56px 28px;
+    }
+    section.book-list h3.book-subtitle {
+        padding: 0px 30px 0px 27px;
+        margin-top: -92px;
+    }
+    .book-menu-group-button {
+        padding: 20px 0 30px;
+        margin-right: 20px;
+    }
+    .book-menu {
+         padding-top: 20px; 
+         padding-bottom: 20px;
+         padding-left: 3%;
+
+    }
+    .book-menu-group {
+        width: 100%;
+    }
+    .book-menu li {
+        width: 28%;
+    }
+    .book-menu li ul li{
+        width: calc(100% + 2px);
+    }
+}
+
+@media (max-width: 888px) {
+  div.memberInfo {
+    width: 58%;
+}
+}
+
+
+@media (max-width: 800px) {
+section.translation .bookInfo {
+    width: 89px;
+}
+
+}
+@media (max-width: 728px) {
+  div.memberInfo {
+    width: 100%;
+}
+div.memberPhoto {
+    float: none;
+    padding:  0 0 10px 3px
+}
+
+}
+
+@media (max-width: 650px) {
+  
+// SIDEBAR TURNED MOBILE MENU
+.mobile-menu {
+    display: block;
+    .fa-bars {
+        font-size: 40px;
+        padding: 13px;
+        color: $black;
+    }
+}
+div.main {
+    padding-left: 0;
+    padding-right: 0px;
+}
+
+div.sidebar.moydart {
+    border-right: none;
+}
+.sidebar {
+    width: 100%;
+    float: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: auto;
+    z-index: 999;
+}
+
+.sidebar header {
+    padding-top: 0px;
+    float: left;
+    width: 80px;
+    h2{
+        font-size: 9px;
+    top: 17px;
+    width: 13%;
+    left: 0%;
+    text-align: center;
+    letter-spacing: 3px;
+    }
+}  
+.sidebar ul.menu {
+    display: none;
+
+}
+
+#menu-moydart-menu-1, #menu-andrew-menu-1  {
+    display: block;
+    position: absolute;
+    z-index: -999;
+    top: 100px;
+    padding: 0px 0px 9px 0px;
+    width: 100%;
+    transition: all 1s ease;
+    li {
+            display: block;
+            width: 100%;
+            border-top: 1px solid red;
+            margin: 0;
+            padding: 10px 0;
+            font-family: $sans;
+            text-transform: uppercase;
+            text-align: center;
+            background: white;
+        }
+}
+
+#menu-andrew-menu-1 li{
+    border-top: 1px solid white;
+    background: $colorOne;
+    a {
+        color: white;
+    }
+}
+
+ul#menu-moydart-menu-1 {
+    a:hover{
+        color: $colorOne;
+    }
+}
+
+ul#menu-andrew-menu-1 {
+    a:hover{
+        color: white;
+    }
+}
+
+#menu-andrew-menu-1 li:last-of-type{
+    border-bottom: 1px solid white;
+}
+
+
+#menu-moydart-menu-1.show, #menu-andrew-menu-1.show {
+    top: -129px;
+}
+
+header.goToOtherSide {
+    display: none;
+}
+.sidebar img {
+    padding-top: 0px;
+    padding: 10px;
+}
+div.sidebar-social {
+    float: left;
+    width: calc(100% - 160px);
+    padding-top: 17px;
+}
+.back-to-top {
+    bottom: 67px;
+}
+
+// header
+
+// entry
+img.bookPic {
+    width: 95px;
+}
+p.entry {
+    font-family: "Old Standard TT",serif;
+    font-size: 15px;
+    clear: both;
+    padding-top: 10px;
+	float: none;
+	width: 100%;
+}
+.bookEntry {
+    margin: 0px 0 0 30px;
+    width: calc(100% - 60px);
+}
+}
+@media (max-width: 600px) {
+.sidebar header h2 {
+    width: 15%;
+}
+}
+@media (max-width: 480px) {
+ section.blog-post {
+    width: 95%;
+  }
+  .sidebar header h2 {
+    width: 18%;
+}
+div.shadow-box img {
+    padding: 10px 16px;
+    }
+}
+
+@media (max-width: 426px) {
+.sidebar header h2 {
+    width: 21%;
+}
+.book-menu>li { 
+    margin: 0px 2px;
+    }
+.book-menu li {
+    width: 31%;
+    }
+section.translation .bookInfo {
+    float: none;
+}
+}
+
+
+@media (max-width: 360px) {
+.sidebar header h2 {
+    width: 24%;
+}
+}

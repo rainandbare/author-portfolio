@@ -4,6 +4,9 @@ $(function(){
 	fakeDropDowMenu();
 	fadeInHome();
 	backToTop();
+	expandTranslation();
+	expandNews();
+	expandMobileMenu();
 });
 
 function showSelectedBooks(){
@@ -66,7 +69,51 @@ function backToTop(){
 	});
 }
 
+function expandTranslation(){
+	$('.langInt').on('mouseover', function(){
+		$(this).children('.langIntOverlay').addClass('show');
+	});
+	$('.langInt').on('mouseout', function(){
+		$(this).children('.langIntOverlay').removeClass('show');
+	});
+	$('.langInt').on('click', function(){
+		$('div.shadow-box').removeClass('show');
+		$(this).next('div.shadow-box').addClass('show');
+
+	});
+	$('.ex').on('click', function(){
+		$(this).parent('div.shadow-box').removeClass('show');
+	});
+
+}
  
+
+function expandNews(){
+	$('.archive').on('click', function(){
+	console.log("hi i am news!");
+	$(this).toggleClass('clicked');
+	$(this).next('main').slideToggle();
+	$(this).find('i.ex').toggleClass('rotate');
+	});
+
+	$('.new-month').on('click', function(){
+	console.log("hi i am a month!");
+	$(this).toggleClass('clicked');
+	$(this).next('section').slideToggle();
+	$(this).find('i.ex').toggleClass('rotate');
+	});
+
+}
+
+function expandMobileMenu(){
+	$('.hamburger').on('click', function(){
+	$('#menu-moydart-menu-1').toggleClass('show');
+	$('#menu-andrew-menu-1').toggleClass('show');
+//	$(this).next('main').slideToggle();
+//	$(this).find('i.ex').toggleClass('rotate');
+	});
+
+}
 
  
 

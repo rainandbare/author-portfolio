@@ -1,5 +1,4 @@
 
-
 <?php get_header(); 
 
 
@@ -73,7 +72,7 @@
                   <!-- info -->
                   <div class="bookInfo">
                     <h4><?php echo $bookEntry['title']; ?></h4>
-                    <p class="published"><?php echo $bookEntry['publisher'][0]; ?>, <span><?php echo $bookEntry['year']; ?></span></p>
+                    <p class="published"><?php echo $bookEntry['publisher'][0]; ?>, <span><?php echo substr($bookEntry['year'],0,4); ?></span></p>
                     <p class="entry"><?php echo $bookEntry['content'];?></p>
                   </div>
                 </section>   

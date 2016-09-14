@@ -96,7 +96,7 @@ img {
 	clear: both;
 }
 
-h2, h3, p, h4, ul, li, ol, h5{
+h1, h2, h3, p, h4, ul, li, ol, h5{
 	margin: 0;
 	padding: 0;
 }
@@ -110,14 +110,14 @@ header.page h2 {
 	padding: 92px 30px 65px 40px;
 	font-family: $sans;
 	text-transform: uppercase;
-	font-weight: 300
+	font-weight: 400
 }
 
 h3 {
 	font-size: 37px;
 	font-family: $sans;
 	text-transform: uppercase;
-	font-weight: 300;
+	font-weight: 400;
     color: $black;
 }
 
@@ -144,4 +144,23 @@ p.other {
 p.entry {
 	font-family: $serif;
 	font-size: 15px;
+	float: right;
+	width: calc(100% - 170px);
+}
+a.inline {
+	padding: 2px 4px;
+	transition: all 1s ease;
+}
+a.inline:hover {
+	background: $colorOne;
+	border-radius: 4px;
+}
+h5 {
+	font-family: $sans;
+	color: $colorOne;
+}
+h6 {
+	padding: 3px 0px 0px 0px;
+	margin: 0;
+	font-weight: 300;
 }

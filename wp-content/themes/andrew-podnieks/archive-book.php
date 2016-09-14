@@ -1,5 +1,3 @@
-
-
 <?php get_header(); 
 
 
@@ -83,10 +81,10 @@
             <div class="bookInfo">
               <h4><?php echo $bookEntry['title']; ?></h4>
 
-              <p class="published"><?php echo $bookEntry['publisher'][0]; ?>, <span><?php echo $bookEntry['year']; ?></span></p>
+              <p class="published"><?php echo $bookEntry['publisher'][0]; ?>, <span><?php echo substr($bookEntry['year'],0,4); ?></span></p>
               <p class="other"><?php echo $bookEntry['other']; ?></p>
-              <p class="entry"><?php echo $bookEntry['content'];?></p>
-            </div>
+            </div> 
+		<p class="entry"><?php echo $bookEntry['content'];?></p>
           </section>   
           <?php  
         // }
@@ -112,7 +110,17 @@
             </div>
             <!-- picture -->
             <img class="bookPic langCover" src="<?php echo get_field('cover') ?>" alt="">
-            <img class="bookPic langInt" src="<?php echo get_field('interior') ?>" alt="">
+            <div class="langInt clearfix">
+              <img class="bookPic" src="<?php echo get_field('interior') ?>" alt="">
+              <div class="langIntOverlay">
+                <p>Click to Enlarge</p>
+              </div>
+            </div>
+            <div class="shadow-box">
+              <div class="ex">&#x000D7</div>
+              <img class="full-size" src="<?php echo get_field('interior') ?>" alt="">
+            </div>
+
             <!-- info -->
           </section>   
       <?php endwhile;

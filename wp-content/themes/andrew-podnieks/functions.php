@@ -287,3 +287,17 @@ function clean($string) {
 
    return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
 }
+
+function custom_excerpt_length( $length ) {
+	return 10;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function new_excerpt_more($more) {
+       global $post;
+	return '<span>...</span>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
+

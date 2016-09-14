@@ -1,6 +1,6 @@
 
           
-            <ul id="book-menu-sort" class="book-menu">
+            <ul id="book-menu-sort" class="book-menu clearfix">
               <li>
                 <input class="all" type="radio" name="book-sort" value="all" id="all">
                 <label class="radio-button" for="all">

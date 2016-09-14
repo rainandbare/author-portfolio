@@ -32,8 +32,8 @@ section.bookEntry {
 section.display {
 	display: block;
 	opacity: 1;
-	position: relative;
-    z-index: -2;
+	// position: relative;
+ //    z-index: -2;
 }
 
 img.bookPic {
@@ -48,10 +48,65 @@ img.bookPic {
 	padding: 10px 0px 10px 0px;
 }
 
-section.translation .bookPic {
-    height: 180px;
+section.translation .langCover{
+	height: 180px;
     width: initial;
 }
+
+section.translation .langInt {
+	position: relative;
+	float: left;
+	width: 33%;
+}
+
+section.translation .langIntOverlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(256,256,256,0.6);
+	opacity: 0;
+	transition: all 0.5s ease;
+	p{
+		color: $black;
+		padding: 28px 0px 0px 10px;
+		display: block;
+		text-transform: uppercase;
+		font: $sans;
+	}
+}
+
+div.shadow-box{
+	position: absolute;	
+	z-index: 998;
+    margin: 0 10px 0px 0px;
+	display: none;
+	opacity: 0;
+	background: rgba(0,0,0,0.7);
+	border-radius: 7px;
+	img {
+		padding: 10px 34px;
+		margin: 0 auto;
+		width: 800px;
+	}
+	.ex{
+		color: white;
+		text-align: right;
+		padding: 10px 15px 0px 0px;
+		font-size: 16px;
+	}
+}
+
+section.translation div.langIntOverlay.show{
+	opacity: 1;
+}
+
+section.translation div.shadow-box.show {
+	opacity: 1;
+	display: block;
+}
+
+
 
 section.translation .bookInfo {
     width: 190px;
@@ -97,7 +152,7 @@ section.translation .bookInfo {
 		  	left: -1px;
 		  	width: 100%;
 		  	transform: translateY(-2em);
-		  	z-index: -1;
+		  	z-index: 2;
 		  	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 			li{
 				transition: all 0.3s ease;
@@ -124,6 +179,8 @@ section.translation .bookInfo {
 		transition: all 0.3s ease;
 		margin: 0px 10px;
 		border-radius: 4px;
+		position: relative;
+		z-index: 4;
 	}
 	>li.hover {
 		background: $colorOne;
@@ -141,7 +198,7 @@ section.translation .bookInfo {
 .book-menu li ul.display {
   visibility: visible; /* shows sub-menu */
   opacity: 1;
-  z-index: 1;
+  z-index: 3;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
 }
@@ -154,8 +211,6 @@ input[type=radio] {
     display: none;
 }
 
-
- 
 .back-to-top {
 	background: none;
 	margin: 0;
@@ -175,7 +230,7 @@ input[type=radio] {
 	}
 }
  
-  
+
  
 
 

@@ -112,4 +112,17 @@ header.goToOtherSide {
 	}
 
 }
+.mobile-menu {
+	display: none;
+	div.white {
+		background: white;
+		width: 100%;
+		border-top: 1px solid $colorOne;
+	}
+	div.red {
+		background: $colorOne;
+		width: 100%;
+	}
+}
+
 

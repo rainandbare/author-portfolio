@@ -7,7 +7,7 @@
    		<div class="red-half half">
         <header class="book-header">
           <img src="<?php echo site_url(); ?>/wp-content/uploads/2016/06/books.jpg" alt="Andrew Podneiks Books">
-          <h2>Andrew Podnieks</h2>
+          <h1>Andrew Podnieks</h1>
         </header>
 	   		
     <?php wp_nav_menu( array(
